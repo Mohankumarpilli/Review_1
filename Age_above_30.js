@@ -4,7 +4,7 @@ const data = require('./people');
 
 function age_above_30(data,age_of){
     let val = data.reduce( (acc,employee) =>{
-        if(employee.age > 30){
+        if(employee.profession == 'Engineer' && employee.age > 30){
             acc.push(employee.name);
         }
         return acc;
